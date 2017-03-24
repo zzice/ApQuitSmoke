@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/drawer_header_rl"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:paddingLeft="10dp"
+    >
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/header_avatar_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:src="@drawable/header_avatar_holder"/>
+
+    <TextView
+        android:id="@+id/header_user_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="心有猛虎细嗅蔷薇i"
+        android:layout_below="@+id/header_avatar_iv"
+        android:textColor="@color/colorWhite"
+        android:layout_marginTop="15dp"
+        android:textSize="16sp"/>
+
+</RelativeLayout>
