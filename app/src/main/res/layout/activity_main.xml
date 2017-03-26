@@ -10,8 +10,10 @@
     <android.support.v4.widget.DrawerLayout
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/drawer_layout"
+        android:scrollbars="none"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        >
 
         <LinearLayout
             android:layout_width="match_parent"

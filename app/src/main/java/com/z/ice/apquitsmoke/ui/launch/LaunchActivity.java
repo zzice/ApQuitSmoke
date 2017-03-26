@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import com.z.ice.apquitsmoke.R;
 import com.z.ice.apquitsmoke.base.BaseActivity;
-import com.z.ice.apquitsmoke.ui.main.MainActivity;
+import com.z.ice.apquitsmoke.ui.sign.SignActivity;
 
 import butterknife.BindView;
 
@@ -53,7 +53,7 @@ public class LaunchActivity extends BaseActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(LaunchActivity.this, MainActivity.class));
+                startActivity(new Intent(LaunchActivity.this, SignActivity.class));
                 finish();
             }
         },3000);

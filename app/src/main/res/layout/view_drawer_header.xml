@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:id="@+id/drawer_header_rl"
-                android:layout_width="match_parent"
-                android:layout_height="180dp"
-                android:paddingLeft="10dp"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_header_cl"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:background="@drawable/header_bg_1"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
     >
 
     <de.hdodenhof.circleimageview.CircleImageView
@@ -11,16 +16,49 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:src="@drawable/header_avatar_holder"/>
+        android:src="@drawable/header_avatar_holder"
+        app:layout_constraintBottom_toBottomOf="@+id/drawer_header_cl"
+        app:layout_constraintTop_toTopOf="@+id/drawer_header_cl"/>
 
     <TextView
         android:id="@+id/header_user_name_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:text="心有猛虎细嗅蔷薇i"
-        android:layout_below="@+id/header_avatar_iv"
         android:textColor="@color/colorWhite"
-        android:layout_marginTop="15dp"
-        android:textSize="16sp"/>
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/header_avatar_iv"/>
 
-</RelativeLayout>
+    <TextView
+        android:id="@+id/header_user_exp_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/header_bg_line"
+        android:paddingBottom="2dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="2dp"
+        android:text="Lv.6"
+        android:textColor="@color/colorWhite"
+        android:textSize="12sp"
+        android:layout_marginStart="5dp"
+        app:layout_constraintLeft_toRightOf="@id/header_user_name_tv"
+        app:layout_constraintBaseline_toBaselineOf="@id/header_user_name_tv"
+/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/header_bg_line"
+        android:paddingBottom="2dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="2dp"
+        android:text="签到"
+        android:textColor="@color/colorWhite"
+        android:textSize="12sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/header_user_name_tv"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+
+</android.support.constraint.ConstraintLayout>

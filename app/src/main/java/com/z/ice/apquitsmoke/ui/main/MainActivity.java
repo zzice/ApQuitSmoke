@@ -46,6 +46,7 @@ public class MainActivity extends BaseActivity {
                 R.string.drawer_open, R.string.drawer_close);
         mDrawerToggle.syncState();//初始化状态
         mDrawerLayout.addDrawerListener(mDrawerToggle);
+        mDrawerNv.getChildAt(0).setVerticalScrollBarEnabled(false);
         mDrawerNv.getHeaderView(0).setBackgroundResource(Constants.headerImgs[new Random().nextInt(Constants.headerImgs.length)]);
     }
 
