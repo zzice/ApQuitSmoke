@@ -19,4 +19,9 @@ public class SignActivity extends BaseActivity {
     protected void initEventAndData() {
 
     }
+
+    @Override
+    public void showError(String msg) {
+
+    }
 }

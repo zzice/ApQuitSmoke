@@ -50,4 +50,8 @@ public class MainActivity extends BaseActivity {
         mDrawerNv.getHeaderView(0).setBackgroundResource(Constants.headerImgs[new Random().nextInt(Constants.headerImgs.length)]);
     }
 
+    @Override
+    public void showError(String msg) {
+
+    }
 }

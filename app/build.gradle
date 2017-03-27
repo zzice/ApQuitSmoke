@@ -29,19 +29,26 @@ dependencies {
     compile "com.android.support:recyclerview-v7:$rootProject.ext.recycleViewVersion"
     compile "com.android.support:support-v4:$rootProject.ext.supportV4Version"
     testCompile "junit:junit:$rootProject.ext.junitVersion"
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile project(':zutilslib')
     //Dagger2
     compile "com.google.dagger:dagger:$rootProject.ext.daggerVersion"
     annotationProcessor "com.google.dagger:dagger-compiler:$rootProject.ext.daggerVersion"
     //Butterknife
-    //Glide
-    //CircleImageView
-    //log
-    compile project(':zutilslib')
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.jakewharton:butterknife:8.5.1'
-    compile 'com.github.bumptech.glide:glide:3.7.0'
-    compile 'de.hdodenhof:circleimageview:2.1.0'
-    compile 'com.orhanobut:logger:1.15'
-    compile 'com.android.support:support-v4:25.3.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+    //Glide
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    //CircleImageView
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    //log
+    compile 'com.orhanobut:logger:1.15'
+    //fragment
+    compile 'me.yokeyword:fragmentation:0.10.1'
+    //Rx
+    //compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    //compile 'io.reactivex.rxjava2:rxjava:2.0.1'
+    compile "io.reactivex:rxjava:1.1.8"
+    compile "io.reactivex:rxandroid:1.2.1"
+    compile 'com.android.support:support-v4:25.3.0'
 }

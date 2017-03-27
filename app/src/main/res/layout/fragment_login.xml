@@ -1,32 +1,115 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:tools="http://schemas.android.com/tools"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                tools:context="com.z.ice.apquitsmoke.ui.sign.LoginFragment">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center"
+              android:orientation="vertical"
+              android:background="#5fffffff"
+              tools:context="com.z.ice.apquitsmoke.ui.sign.LoginFragment">
 
-    <EditText
-        android:id="@+id/login_phone_et"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="18661965238"
-        android:layout_centerHorizontal="true"
-        android:textColor="@color/colorWhite"/>
+        android:layout_marginEnd="50dp"
+        android:layout_marginStart="50dp"
+        android:padding="10dp"
+        android:orientation="horizontal">
 
-    <EditText
-        android:id="@+id/login_password_et"
-        android:layout_width="wrap_content"
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/sign_user_icon"/>
+
+        <EditText
+            android:id="@+id/login_phone_et"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center"
+            android:inputType="phone"
+            android:text="18661965238"
+            android:textColor="@color/colorWhite"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginStart="50dp"
+        android:background="@color/colorWhite"/>
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/login_phone_et"
-        android:text="18661965238"
-        android:textColor="@color/colorWhite"/>
+        android:layout_marginEnd="50dp"
+        android:padding="10dp"
+        android:layout_marginStart="50dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/sign_password_icon"/>
+
+        <EditText
+            android:id="@+id/login_password_et"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center"
+            android:inputType="textPassword"
+            android:text="18661965238"
+            android:textColor="@color/colorWhite"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginStart="50dp"
+        android:background="@color/colorWhite"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginStart="50dp"
+        >
+        <CheckBox
+            android:id="@+id/rememb_psw_cb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:text="记住密码"
+            android:textColor="@color/colorWhite"
+            android:layout_toRightOf="@+id/rememb_psw_cb"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:text="忘记密码"
+            android:textColor="@color/colorWhite"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="50dp"
-        android:layout_below="@+id/login_password_et"
-        android:background="@drawable/sign_btn_bg"
-        android:text="Sign in"
+        android:background="#af57744C"
+        android:text="登 录"
         android:textColor="@color/colorWhite"/>
-</RelativeLayout>
+
+
+</LinearLayout>
