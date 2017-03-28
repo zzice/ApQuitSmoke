@@ -1,43 +1,31 @@
 package com.z.ice.apquitsmoke.base;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
-import com.z.ice.apquitsmoke.app.App;
-import com.z.ice.apquitsmoke.di.component.ActivityComponent;
-import com.z.ice.apquitsmoke.di.component.DaggerActivityComponent;
-import com.z.ice.apquitsmoke.di.module.ActivityModule;
-import com.z.ice.zutilslib.util.ActivityManagerUtil;
-
-import javax.inject.Inject;
-
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 import me.yokeyword.fragmentation.SupportActivity;
 
 /**
- * desc: 基类Activity
- * date: 2017/3/22
+ * desc: SimpleBaseActivity 无MVPActivity基类
+ * date: 2017/3/28
  * author: Zice
  */
-public abstract class BaseActivity<T extends BasePresenter> extends SupportActivity implements BaseView {
-    @Inject
-    protected T mPresenter;
-    private Unbinder mUnbinder;
+public abstract class SimpleBaseActivity extends SupportActivity {
+    protected Activity mContext;
+    private Unbinder mUnBinder;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(getLayoutId());
-        //绑定
-        mUnbinder = ButterKnife.bind(this);
-        initInject();
-        if (mPresenter != null)
-            mPresenter.attachView(this);
-        ActivityManagerUtil.addActivity(this);
+        setContentView(getLayout());
+        mUnBinder = ButterKnife.bind(this);
+        mContext = this;
         initEventAndData();
     }
 
@@ -49,7 +37,6 @@ public abstract class BaseActivity<T extends BasePresenter> extends SupportActiv
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //https://github.com/YoKeyword/Fragmentation/
                 onBackPressedSupport();
             }
         });
@@ -58,28 +45,10 @@ public abstract class BaseActivity<T extends BasePresenter> extends SupportActiv
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if (mPresenter != null)
-            mPresenter.detachView();
-        //解除绑定
-        mUnbinder.unbind();
-        ActivityManagerUtil.finishActivity(this);
+        mUnBinder.unbind();
     }
 
-    protected ActivityComponent getActivityComponent() {
-        return  DaggerActivityComponent.builder()
-                .appComponent(App.getAppComponent())
-                .activityModule(getActivityModule())
-                .build();
-    }
-
-    protected ActivityModule getActivityModule() {
-        return new ActivityModule(this);
-    }
-
-    protected abstract int getLayoutId();
-
-    protected abstract void initInject();
-
+    protected abstract int getLayout();
     protected abstract void initEventAndData();
 
     /**

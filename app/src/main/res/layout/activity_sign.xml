@@ -1,90 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/sign_bg1">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/colorTranslucent"
-        android:gravity="center_horizontal"
-        android:orientation="vertical">
-
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:layout_width="wrap_content"
-            android:layout_height="200dp"
-            android:src="@drawable/header_avatar_holder"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="50dp"
-            android:layout_marginStart="50dp"
-            android:background="@drawable/sign_et_bg"
-            android:orientation="horizontal"
-            android:padding="10dp">
-
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@null"
-                android:hint="User Phone"
-                android:textColorHint="@color/colorWhite"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="50dp"
-            android:layout_marginStart="50dp"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/sign_et_bg"
-            android:orientation="horizontal"
-            android:padding="10dp">
-
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@null"
-                android:hint="User Password"
-                android:textColorHint="@color/colorWhite"/>
-
-        </LinearLayout>
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="50dp"
-            android:background="@drawable/sign_btn_bg"
-            android:text="Sign in"
-            android:textColor="@color/colorWhite"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="Forgot password?"
-            android:textColor="@color/colorWhite"/>
-    </LinearLayout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/sign_bg7"
+              android:orientation="vertical">
 
     <TextView
-        android:id="@+id/login_register_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="20dp"
-        android:text="New here? Sign Up"
-        android:textColor="@color/colorWhite"/>
-
-    <View
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_above="@+id/login_register_tv"
-        android:layout_marginEnd="50dp"
-        android:layout_marginStart="50dp"
-        android:background="@color/colorWhite"/>
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Better master one than engage with ten."
+        android:textColor="@color/colorWhite"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        />
 
-</RelativeLayout>
+    <android.support.design.widget.TabLayout
+        android:id="@+id/sign_tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabIndicatorColor="@color/colorPrimary"
+        app:tabSelectedTextColor="@color/colorWhite"
+        app:tabTextColor="@color/colorWhite"/>
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/sign_fm_vp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="#5fffffff"/>
+
+</LinearLayout>

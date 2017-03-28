@@ -1,0 +1,99 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:padding="20dp"
+              tools:context="com.z.ice.apquitsmoke.ui.main.SelectModeFragment">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="8dp"
+        android:clickable="true"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:paddingLeft="16sp"
+            android:paddingRight="16sp">
+
+            <TextView
+                android:id="@+id/mode1_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="控烟模式"
+                android:textColor="@color/colorWhite"
+                android:textSize="24sp"/>
+
+            <TextView
+                android:id="@+id/mode1_detail_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mode1_name_tv"
+                android:layout_marginTop="16dp"
+                android:text="xxxxxxxx\nxxxxxxxxxxxxxxxxxxxx\nxxxxxxxxxxxxxxxxxxxx"
+                android:textColor="@color/colorWhite"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/mode1_detail1_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mode1_detail_tv"
+                android:layout_marginBottom="16sp"
+                android:layout_marginTop="16dp"
+                android:text="xxxxxxxx\nxxxxxxxxxxxxxxxxxxxx\nxxxxxxxxxxxxxxxxxxxx\nxxxxxxxxxxxxxxxxxxxx"
+                android:textColor="@color/colorWhite"/>
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="8dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/mode2_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="戒烟模式"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/mode2_detail_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mode2_name_tv"
+                android:text="xxxxxxxx\nxxxxxxxxxxxxxxxxxxxx\nxxxxxxxxxxxxxxxxxxxx"
+                android:textColor="@color/colorWhite"/>
+
+            <TextView
+                android:id="@+id/mode2_detail1_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mode2_detail_tv"
+                android:text="xxxxxxxx\nxxxxxxxxxxxxxxxxxxxx\nxxxxxxxxxxxxxxxxxxxx\nxxxxxxxxxxxxxxxxxxxx"
+                android:textColor="@color/colorWhite"/>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

@@ -27,7 +27,7 @@
         android:layout_marginTop="20dp"
         android:text="心有猛虎细嗅蔷薇i"
         android:textColor="@color/colorWhite"
-        android:textSize="16sp"
+        android:textSize="14sp"
         app:layout_constraintTop_toBottomOf="@+id/header_avatar_iv"/>
 
     <TextView
@@ -36,8 +36,8 @@
         android:layout_height="wrap_content"
         android:background="@drawable/header_bg_line"
         android:paddingBottom="2dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
         android:paddingTop="2dp"
         android:text="Lv.6"
         android:textColor="@color/colorWhite"
@@ -51,8 +51,8 @@
         android:layout_height="wrap_content"
         android:background="@drawable/header_bg_line"
         android:paddingBottom="2dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
         android:paddingTop="2dp"
         android:text="签到"
         android:textColor="@color/colorWhite"

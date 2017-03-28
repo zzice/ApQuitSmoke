@@ -2,9 +2,8 @@
               xmlns:tools="http://schemas.android.com/tools"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:background="#5fffffff"
-              android:gravity="center"
               android:orientation="vertical"
+              android:paddingTop="40dp"
               tools:context="com.z.ice.apquitsmoke.ui.sign.LoginFragment">
 
     <LinearLayout
