@@ -11,7 +11,7 @@ import dagger.Provides;
 /**
  * desc: FragmentModule.java
  * date: 2017/3/28
- * author: ZhaoBing
+ * author: Zice
  */
 
 @Module

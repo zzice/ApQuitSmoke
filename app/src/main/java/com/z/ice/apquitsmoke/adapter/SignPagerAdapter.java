@@ -14,6 +14,7 @@ import com.z.ice.apquitsmoke.ui.sign.RegisterFragment;
  */
 public class SignPagerAdapter extends FragmentPagerAdapter {
 
+    //登录、注册
     private Fragment[] mFragments = {new LoginFragment(), new RegisterFragment()};
     private CharSequence[] titles = {"登录", "注册"};
 

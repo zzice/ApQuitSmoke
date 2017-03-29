@@ -10,7 +10,7 @@ import dagger.Provides;
 /**
  * desc: ActivityModule.java
  * date: 2017/3/27
- * author: ZhaoBing
+ * author: Zice
  */
 
 @Module
@@ -22,8 +22,8 @@ public class ActivityModule {
         this.mActivity = activity;
     }
 
-    @Provides
     @ActivityScope
+    @Provides
     public Activity provideActivity() {
         return mActivity;
     }

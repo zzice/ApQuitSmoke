@@ -26,9 +26,10 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
-            android:text="吸烟有害健康"
+            android:gravity="center"
+            android:text="你终于做了一个艰难的决定\n戒烟"
             android:textColor="@color/colorWhite"
-            android:textSize="24sp"/>
+            android:textSize="20sp"/>
 
         <TextView
             android:id="@+id/launch_version_tv"

@@ -10,7 +10,7 @@ import rx.subjects.Subject;
 /**
  * desc: RxBus
  * date: 2017/3/27
- * author: ZhaoBing
+ * author: Zice
  */
 public class RxBus {
     // 主题

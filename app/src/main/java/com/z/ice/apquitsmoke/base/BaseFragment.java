@@ -2,6 +2,7 @@ package com.z.ice.apquitsmoke.base;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -106,4 +107,35 @@ public abstract class BaseFragment<T extends BasePresenter> extends SupportFragm
     protected abstract int getLayoutId();
 
     protected abstract void initEventAndData();
+
+    /**
+     * 打开指定Activity
+     *
+     * @param cls Activity Class
+     */
+    protected void openActivity(Class<?> cls) {
+        Intent intent = new Intent(getActivity(), cls);
+        startActivity(intent);
+    }
+
+    protected void openActivity(Class<?> cls, Bundle bundle) {
+        Intent intent = new Intent(getActivity(), cls);
+        intent.putExtras(bundle);
+        startActivity(intent);
+    }
+
+    protected void openAndCloseActivity(Class<?> cls, Bundle bundle) {
+        openActivity(cls, bundle);
+        getActivity().finish();
+    }
+
+    /**
+     * 打开指定Activity，并关闭当前Activity
+     *
+     * @param cls Activity Class
+     */
+    protected void openAndCloseActivity(Class<?> cls) {
+        openActivity(cls);
+        getActivity().finish();
+    }
 }

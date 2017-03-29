@@ -11,7 +11,7 @@ import dagger.Component;
 /**
  * desc: ActivityComponent.java
  * date: 2017/3/27
- * author: ZhaoBing
+ * author: Zice
  */
 
 @ActivityScope

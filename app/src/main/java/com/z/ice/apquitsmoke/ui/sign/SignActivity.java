@@ -5,13 +5,15 @@ import android.support.v4.view.ViewPager;
 
 import com.z.ice.apquitsmoke.R;
 import com.z.ice.apquitsmoke.adapter.SignPagerAdapter;
-import com.z.ice.apquitsmoke.base.BaseActivity;
-import com.z.ice.apquitsmoke.di.presenter.LaunchPresenter;
-import com.z.ice.apquitsmoke.di.presenter.contract.LaunchContract;
+import com.z.ice.apquitsmoke.base.SimpleBaseActivity;
 
 import butterknife.BindView;
-
-public class SignActivity extends BaseActivity<LaunchPresenter> implements LaunchContract.View{
+/**
+ * desc: 注册登录页
+ * date: 2017/3/29
+ * author: Zice
+ */
+public class SignActivity extends SimpleBaseActivity{
 
     @BindView(R.id.sign_tab_layout)
     TabLayout mSignTabLayout;
@@ -23,10 +25,6 @@ public class SignActivity extends BaseActivity<LaunchPresenter> implements Launc
         return R.layout.activity_sign;
     }
 
-    @Override
-    protected void initInject() {
-
-    }
 
     @Override
     protected void initEventAndData() {
@@ -35,28 +33,4 @@ public class SignActivity extends BaseActivity<LaunchPresenter> implements Launc
         mSignTabLayout.setupWithViewPager(mSignFmVp);
     }
 
-    @Override
-    public void showError(String msg) {
-
-    }
-
-    @Override
-    public void setVersionNameAndCopyright(String versionName, String copyRight) {
-
-    }
-
-    @Override
-    public void jumpToLogin() {
-
-    }
-
-    @Override
-    public void jumpToMain() {
-
-    }
-
-    @Override
-    public void startLaunchAnimation() {
-
-    }
 }

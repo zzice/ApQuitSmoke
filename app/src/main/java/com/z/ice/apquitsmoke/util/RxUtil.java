@@ -8,7 +8,7 @@ import rx.schedulers.Schedulers;
 /**
  * desc: RxUtil.java
  * date: 2017/3/27
- * author: ZhaoBing
+ * author: Zice
  */
 public class RxUtil {
 

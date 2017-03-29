@@ -5,13 +5,14 @@ import android.app.Activity;
 import com.z.ice.apquitsmoke.di.module.FragmentModule;
 import com.z.ice.apquitsmoke.di.scope.FragmentScope;
 import com.z.ice.apquitsmoke.ui.main.SelectModeFragment;
+import com.z.ice.apquitsmoke.ui.sign.LoginFragment;
 
 import dagger.Component;
 
 /**
  * desc: FragmentComponent.java
  * date: 2017/3/28
- * author: ZhaoBing
+ * author: Zice
  */
 
 @FragmentScope
@@ -19,6 +20,8 @@ import dagger.Component;
 public interface FragmentComponent {
 
     Activity getActivity();
+
+    void inject(LoginFragment loginFragment);
 
     void inject(SelectModeFragment selectModeFragment);
 

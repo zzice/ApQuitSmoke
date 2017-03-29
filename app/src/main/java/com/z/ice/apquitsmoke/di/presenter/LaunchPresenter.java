@@ -39,7 +39,7 @@ public class LaunchPresenter extends RxPresenter<LaunchContract.View> implements
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                mView.jumpToMain();
+                mView.jumpToLogin();
             }
         }, 3000);
     }

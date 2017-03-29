@@ -4,6 +4,7 @@
               android:layout_height="match_parent"
               android:orientation="vertical"
               android:paddingTop="40dp"
+              android:background="#5fffffff"
               tools:context="com.z.ice.apquitsmoke.ui.sign.LoginFragment">
 
     <LinearLayout
@@ -108,6 +109,7 @@
     </RelativeLayout>
 
     <Button
+        android:id="@+id/sign_login_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"

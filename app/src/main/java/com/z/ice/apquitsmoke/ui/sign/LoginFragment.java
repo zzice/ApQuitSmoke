@@ -1,30 +1,75 @@
 package com.z.ice.apquitsmoke.ui.sign;
 
 
-import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Toast;
 
 import com.z.ice.apquitsmoke.R;
+import com.z.ice.apquitsmoke.base.BaseFragment;
+import com.z.ice.apquitsmoke.di.presenter.LoginPresenter;
+import com.z.ice.apquitsmoke.di.presenter.contract.LoginContract;
+import com.z.ice.apquitsmoke.ui.main.MainActivity;
+
+import butterknife.BindView;
+import butterknife.OnClick;
 
 /**
- * A simple {@link Fragment} subclass.
+ * desc: 登录Fragment
+ * date: 2017/3/29
+ * author: Zice
  */
-public class LoginFragment extends Fragment {
+public class LoginFragment extends BaseFragment<LoginPresenter> implements LoginContract.View {
 
-
-    public LoginFragment() {
-        // Required empty public constructor
-    }
-
+    @BindView(R.id.sign_login_btn)
+    Button mSignLoginBtn;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_login, container, false);
+    protected void initInject() {
+        getFragmentComponent().inject(this);
     }
 
+    @Override
+    protected int getLayoutId() {
+        return R.layout.fragment_login;
+    }
+
+    @Override
+    protected void initEventAndData() {
+
+    }
+
+    @Override
+    public void showError(String msg) {
+
+    }
+
+    @Override
+    public void showProgress() {
+
+    }
+
+    @Override
+    public void showSuccess() {
+
+    }
+
+    @Override
+    public void showToastMessage(String message) {
+        Toast.makeText(getActivity(), "登录成功", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void jumpToMain() {
+        openAndCloseActivity(MainActivity.class);
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+    }
+
+    @OnClick(R.id.sign_login_btn)
+    public void signLoginJumpActivity() {
+        mPresenter.setLoginAction();
+    }
 }

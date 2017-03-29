@@ -23,7 +23,7 @@ public abstract class SimpleBaseActivity extends SupportActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(getLayout());
+        setContentView(getLayoutId());
         mUnBinder = ButterKnife.bind(this);
         mContext = this;
         initEventAndData();
@@ -48,7 +48,7 @@ public abstract class SimpleBaseActivity extends SupportActivity {
         mUnBinder.unbind();
     }
 
-    protected abstract int getLayout();
+    protected abstract int getLayoutId();
     protected abstract void initEventAndData();
 
     /**

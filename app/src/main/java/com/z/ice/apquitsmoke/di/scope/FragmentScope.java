@@ -9,7 +9,7 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 /**
  * desc: FragmentScope.java
  * date: 2017/3/28
- * author: ZhaoBing
+ * author: Zice
  */
 
 @Scope

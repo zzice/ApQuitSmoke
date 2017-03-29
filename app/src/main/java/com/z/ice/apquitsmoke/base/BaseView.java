@@ -6,5 +6,7 @@ package com.z.ice.apquitsmoke.base;
  * author: Zice
  */
 public interface BaseView {
+
     void showError(String msg);
+
 }

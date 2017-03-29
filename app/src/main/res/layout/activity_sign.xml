@@ -11,9 +11,10 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:gravity="center"
-        android:text="Better master one than engage with ten."
+        android:layout_marginTop="20dp"
+        android:text="If you love life, life will love you back.\n爱生活，生活也会爱你。"
         android:textColor="@color/colorWhite"
-        android:textSize="16sp"
+        android:textSize="14sp"
         android:textStyle="bold"
         />
 
@@ -31,6 +32,6 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="2"
-        android:background="#5fffffff"/>
+        />
 
 </LinearLayout>

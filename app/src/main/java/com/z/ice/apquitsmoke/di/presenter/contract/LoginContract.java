@@ -4,11 +4,11 @@ import com.z.ice.apquitsmoke.base.BasePresenter;
 import com.z.ice.apquitsmoke.base.BaseView;
 
 /**
- * desc: SignContract
- * date: 2017/3/28
+ * desc: LoginContract.java
+ * date: 2017/3/29
  * author: Zice
  */
-public interface SignContract {
+public interface LoginContract {
 
     interface View extends BaseView {
 
@@ -18,17 +18,14 @@ public interface SignContract {
 
         void showToastMessage(String message);
 
+        void jumpToMain();
+
     }
 
     interface Presenter extends BasePresenter<View> {
 
-        void jumpToMain();
-
-        void getVerifyCode();
-
         void setLoginAction();
 
-        void setRegisterAction();
     }
 
 }

@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
+import com.orhanobut.logger.Logger;
 import com.z.ice.apquitsmoke.app.App;
 import com.z.ice.apquitsmoke.di.component.ActivityComponent;
 import com.z.ice.apquitsmoke.di.component.DaggerActivityComponent;
@@ -35,6 +36,7 @@ public abstract class BaseActivity<T extends BasePresenter> extends SupportActiv
         //绑定
         mUnbinder = ButterKnife.bind(this);
         initInject();
+        Logger.d(this);
         if (mPresenter != null)
             mPresenter.attachView(this);
         ActivityManagerUtil.addActivity(this);

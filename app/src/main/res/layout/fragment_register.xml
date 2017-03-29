@@ -4,6 +4,7 @@
               android:layout_height="match_parent"
               android:orientation="vertical"
               android:paddingTop="40dp"
+              android:background="#5fffffff"
               tools:context="com.z.ice.apquitsmoke.ui.sign.LoginFragment">
 
     <LinearLayout
