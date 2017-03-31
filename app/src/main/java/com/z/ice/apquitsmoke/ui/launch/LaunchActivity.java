@@ -47,6 +47,16 @@ public class LaunchActivity extends BaseActivity<LaunchPresenter> implements Lau
     }
 
     @Override
+    public void showShortMessage(String msg) {
+
+    }
+
+    @Override
+    public void isShowLoadingView(boolean isShow) {
+
+    }
+
+    @Override
     public void setVersionNameAndCopyright(String versionName, String copyRight) {
         AssetManager mgr = getAssets();//得到AssetManager
         Typeface tf = Typeface.createFromAsset(mgr, "fonts/Slabo27px-Regular.ttf");//根据路径得到Typeface

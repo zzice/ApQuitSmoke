@@ -9,4 +9,8 @@ public interface BaseView {
 
     void showError(String msg);
 
+    void showShortMessage(String msg);
+
+    void isShowLoadingView(boolean isShow);
+
 }

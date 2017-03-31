@@ -23,3 +23,14 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+# SMSSDK
+-dontwarn com.mob.**
+-keep class com.mob.**{*;}
+
+-dontwarn cn.smssdk.**
+-keep class cn.smssdk.**{*;}
+
+-keep class com.blankj.utilcode.** { *; }
+-keepclassmembers class com.blankj.utilcode.** { *; }
+-dontwarn com.blankj.utilcode.**

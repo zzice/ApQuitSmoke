@@ -2,6 +2,7 @@ package com.z.ice.apquitsmoke.app;
 
 import android.app.Application;
 
+import com.blankj.utilcode.util.Utils;
 import com.z.ice.apquitsmoke.di.component.AppComponent;
 import com.z.ice.apquitsmoke.di.component.DaggerAppComponent;
 import com.z.ice.apquitsmoke.di.module.AppModule;
@@ -24,6 +25,9 @@ public class App extends Application {
     public void onCreate() {
         super.onCreate();
         instance = this;
+        //初始化Utils工具库
+        //https://github.com/Blankj/AndroidUtilCode/blob/master/README-CN.md
+        Utils.init(this);
     }
 
     public static AppComponent getAppComponent() {

@@ -22,8 +22,7 @@ public class LoginPresenter extends RxPresenter<LoginContract.View> implements L
 
     @Override
     public void setLoginAction() {
-        mView.showToastMessage("登录成功");
+        mView.showShortMessage("登录成功");
         mView.jumpToMain();
-
     }
 }

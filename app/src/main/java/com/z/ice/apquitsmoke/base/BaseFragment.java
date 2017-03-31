@@ -5,14 +5,18 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 
+import com.z.ice.apquitsmoke.R;
 import com.z.ice.apquitsmoke.app.App;
 import com.z.ice.apquitsmoke.di.component.DaggerFragmentComponent;
 import com.z.ice.apquitsmoke.di.component.FragmentComponent;
 import com.z.ice.apquitsmoke.di.module.FragmentModule;
+import com.z.ice.zutilslib.widget.CustomProgressDialog;
 
 import javax.inject.Inject;
 
@@ -34,6 +38,7 @@ public abstract class BaseFragment<T extends BasePresenter> extends SupportFragm
     protected Context mContext;
     private Unbinder mUnBinder;
     protected boolean isInited = false;
+    protected CustomProgressDialog mProgressDialog;
 
     @Override
     public void onAttach(Context context) {
@@ -58,6 +63,7 @@ public abstract class BaseFragment<T extends BasePresenter> extends SupportFragm
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         mView = inflater.inflate(getLayoutId(), null);
         initInject();
+        mProgressDialog = new CustomProgressDialog(getActivity(), R.style.CustomDialog);
         return mView;
     }
 
@@ -137,5 +143,9 @@ public abstract class BaseFragment<T extends BasePresenter> extends SupportFragm
     protected void openAndCloseActivity(Class<?> cls) {
         openActivity(cls);
         getActivity().finish();
+    }
+
+    public boolean isEditTextValueEmpty(EditText et) {
+        return TextUtils.isEmpty(et.getText().toString().trim());
     }
 }

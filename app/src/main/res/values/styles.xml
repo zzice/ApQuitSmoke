@@ -13,7 +13,7 @@
         <item name="colorControlNormal">@android:color/white</item>
     </style>
 
-        <!--<item name="android:windowBackground">@drawable/launch_bg</item>-->
+    <!--<item name="android:windowBackground">@drawable/launch_bg</item>-->
     <style name="SplashTheme" parent="AppTheme">
         <item name="android:windowIsTranslucent">true</item>
     </style>
@@ -53,5 +53,10 @@
         <!--<item name="banner_tipTextColor">@android:color/white</item>-->
         <!-- 加载网络数据时覆盖在BGABanner最上层的占位图 -->
         <!--<item name="banner_placeholderDrawable">@drawable/holder</item>-->
+    </style>
+
+    <style name="CustomDialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
     </style>
 </resources>

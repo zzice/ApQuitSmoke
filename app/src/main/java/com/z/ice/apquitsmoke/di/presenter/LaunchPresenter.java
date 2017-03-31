@@ -19,7 +19,7 @@ import javax.inject.Inject;
 public class LaunchPresenter extends RxPresenter<LaunchContract.View> implements LaunchContract.Presenter {
 
     @Inject
-    public LaunchPresenter() {
+    LaunchPresenter() {
     }
 
     @Override

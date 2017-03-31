@@ -2,13 +2,13 @@ package com.z.ice.apquitsmoke.ui.sign;
 
 
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.z.ice.apquitsmoke.R;
 import com.z.ice.apquitsmoke.base.BaseFragment;
 import com.z.ice.apquitsmoke.di.presenter.LoginPresenter;
 import com.z.ice.apquitsmoke.di.presenter.contract.LoginContract;
 import com.z.ice.apquitsmoke.ui.main.MainActivity;
+import com.z.ice.zutilslib.util.ToastUtil;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -44,18 +44,18 @@ public class LoginFragment extends BaseFragment<LoginPresenter> implements Login
     }
 
     @Override
+    public void showShortMessage(String msg) {
+        ToastUtil.showShortToast(getActivity(),msg);
+    }
+
+    @Override
+    public void isShowLoadingView(boolean isShow) {
+
+    }
+
+    @Override
     public void showProgress() {
 
-    }
-
-    @Override
-    public void showSuccess() {
-
-    }
-
-    @Override
-    public void showToastMessage(String message) {
-        Toast.makeText(getActivity(), "登录成功", Toast.LENGTH_SHORT).show();
     }
 
     @Override

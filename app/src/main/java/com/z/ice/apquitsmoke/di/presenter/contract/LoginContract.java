@@ -14,10 +14,6 @@ public interface LoginContract {
 
         void showProgress();
 
-        void showSuccess();
-
-        void showToastMessage(String message);
-
         void jumpToMain();
 
     }

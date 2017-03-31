@@ -63,6 +63,16 @@ public class MainActivity extends BaseActivity<LaunchPresenter> implements Launc
     }
 
     @Override
+    public void showShortMessage(String msg) {
+
+    }
+
+    @Override
+    public void isShowLoadingView(boolean isShow) {
+
+    }
+
+    @Override
     public void setVersionNameAndCopyright(String versionName, String copyRight) {
 
     }
