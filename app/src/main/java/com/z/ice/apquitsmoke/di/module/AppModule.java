@@ -1,6 +1,8 @@
 package com.z.ice.apquitsmoke.di.module;
 
 import com.z.ice.apquitsmoke.app.App;
+import com.z.ice.apquitsmoke.http.RetrofitHelper;
+import com.z.ice.apquitsmoke.http.api.Apis;
 
 import javax.inject.Singleton;
 
@@ -26,4 +28,11 @@ public class AppModule {
     App provideApplicationContext() {
         return mApp;
     }
+
+    @Provides
+    @Singleton
+    RetrofitHelper provideRetrofitHelper(Apis apis) {
+        return new RetrofitHelper(apis);
+    }
+
 }

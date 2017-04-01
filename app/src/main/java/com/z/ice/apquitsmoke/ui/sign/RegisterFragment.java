@@ -1,6 +1,7 @@
 package com.z.ice.apquitsmoke.ui.sign;
 
 
+import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -10,6 +11,7 @@ import com.blankj.utilcode.util.RegexUtils;
 import com.z.ice.apquitsmoke.R;
 import com.z.ice.apquitsmoke.app.Constants;
 import com.z.ice.apquitsmoke.base.BaseFragment;
+import com.z.ice.apquitsmoke.bean.UserBean;
 import com.z.ice.apquitsmoke.di.presenter.RegisterPresenter;
 import com.z.ice.apquitsmoke.di.presenter.contract.RegisterContract;
 import com.z.ice.apquitsmoke.ui.main.MainActivity;
@@ -82,8 +84,10 @@ public class RegisterFragment extends BaseFragment<RegisterPresenter> implements
     }
 
     @Override
-    public void jumpToMain() {
-        openAndCloseActivity(MainActivity.class);
+    public void jumpToMain(UserBean userBean) {
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("user",userBean);
+        openAndCloseActivity(MainActivity.class,bundle);
     }
 
     @Override

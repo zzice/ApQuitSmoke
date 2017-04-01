@@ -2,6 +2,7 @@ package com.z.ice.apquitsmoke.di.presenter.contract;
 
 import com.z.ice.apquitsmoke.base.BasePresenter;
 import com.z.ice.apquitsmoke.base.BaseView;
+import com.z.ice.apquitsmoke.bean.UserBean;
 
 import java.util.Map;
 
@@ -14,7 +15,7 @@ public interface RegisterContract {
 
     interface View extends BaseView {
 
-        void jumpToMain();
+        void jumpToMain(UserBean userBean);
 
         /**
          * 启动或关闭倒计时

@@ -6,6 +6,7 @@ import com.blankj.utilcode.util.Utils;
 import com.z.ice.apquitsmoke.di.component.AppComponent;
 import com.z.ice.apquitsmoke.di.component.DaggerAppComponent;
 import com.z.ice.apquitsmoke.di.module.AppModule;
+import com.z.ice.apquitsmoke.di.module.HttpModule;
 
 /**
  * desc: App
@@ -32,7 +33,10 @@ public class App extends Application {
 
     public static AppComponent getAppComponent() {
         if (mAppComponent == null) {
-            mAppComponent = DaggerAppComponent.builder().appModule(new AppModule(instance)).build();
+            mAppComponent = DaggerAppComponent.builder()
+                    .appModule(new AppModule(instance))
+                    .httpModule(new HttpModule())
+                    .build();
         }
         return mAppComponent;
     }

@@ -5,8 +5,11 @@ import android.os.Message;
 
 import com.orhanobut.logger.Logger;
 import com.z.ice.apquitsmoke.base.RxPresenter;
+import com.z.ice.apquitsmoke.bean.UserBean;
 import com.z.ice.apquitsmoke.di.presenter.contract.RegisterContract;
 import com.z.ice.apquitsmoke.di.scope.FragmentScope;
+import com.z.ice.apquitsmoke.http.RetrofitHelper;
+import com.z.ice.apquitsmoke.util.RxUtil;
 
 import org.json.JSONObject;
 
@@ -16,6 +19,8 @@ import javax.inject.Inject;
 
 import cn.smssdk.EventHandler;
 import cn.smssdk.SMSSDK;
+import rx.Subscription;
+import rx.functions.Action1;
 
 /**
  * desc: RegisterPresenter
@@ -25,10 +30,12 @@ import cn.smssdk.SMSSDK;
 @FragmentScope
 public class RegisterPresenter extends RxPresenter<RegisterContract.View> implements RegisterContract.Presenter {
 
-    @Inject
-    RegisterPresenter() {
-    }
+    private RetrofitHelper mRetrofitHelper;
 
+    @Inject
+    public RegisterPresenter(RetrofitHelper retrofitHelper) {
+        mRetrofitHelper = retrofitHelper;
+    }
 
     @Override
     public void getVerificationCode(String phoneNumber) {
@@ -86,8 +93,26 @@ public class RegisterPresenter extends RxPresenter<RegisterContract.View> implem
     @Override
     public void submitRegisterInfo(Map<String, String> map) {
         String phoneNumber = map.get("phone");
-        String code = map.get("password");
-        mView.jumpToMain();
+        String password = map.get("password");
+        Subscription subscription = mRetrofitHelper.fetchUserInfo(phoneNumber, password)
+                .compose(RxUtil.<UserBean>rxSchedulerHelper())
+                .subscribe(new Action1<UserBean>() {
+                    @Override
+                    public void call(UserBean userBean) {
+                        if (userBean.isSuccess()) {
+                            Logger.d("token:" + userBean.getToken());
+                            mView.showShortMessage("注册成功");
+                            mView.jumpToMain(userBean);
+                        }
+                    }
+                }, new Action1<Throwable>() {
+                    @Override
+                    public void call(Throwable throwable) {
+                        Logger.d("error:"+throwable);
+                        mView.showError(throwable.getMessage());
+                    }
+                });
+        addSubscrebe(subscription);
         mView.isShowLoadingView(false);
     }
 
