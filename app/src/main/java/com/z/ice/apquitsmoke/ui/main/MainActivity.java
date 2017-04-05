@@ -1,10 +1,11 @@
 package com.z.ice.apquitsmoke.ui.main;
 
+import android.content.DialogInterface;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.Toolbar;
-import android.widget.FrameLayout;
 
 import com.orhanobut.logger.Logger;
 import com.z.ice.apquitsmoke.R;
@@ -28,8 +29,8 @@ public class MainActivity extends BaseActivity<LaunchPresenter> implements Launc
     DrawerLayout mDrawerLayout;
 
     ActionBarDrawerToggle mDrawerToggle;
-    @BindView(R.id.fl_main_content)
-    FrameLayout mFlMainContent;
+//    @BindView(R.id.fl_main_content)
+//    FrameLayout mFlMainContent;
 
 
     @Override
@@ -52,9 +53,32 @@ public class MainActivity extends BaseActivity<LaunchPresenter> implements Launc
         mDrawerToggle.syncState();//初始化状态
         mDrawerLayout.addDrawerListener(mDrawerToggle);
         mDrawerNv.getChildAt(0).setVerticalScrollBarEnabled(false);
-        SelectModeFragment selectModeFragment = new SelectModeFragment();
         mDrawerNv.getHeaderView(0).setBackgroundResource(Constants.headerImgs[new Random().nextInt(Constants.headerImgs.length)]);
+        SelectModeFragment selectModeFragment = new SelectModeFragment();
         loadRootFragment(R.id.fl_main_content, selectModeFragment);
+        //判断是否初次进入应用
+        //dialog问卷调查 烟龄 每日抽烟数量 价格 模式选择
+        //tips 烟龄 每日抽烟数量 价格
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        //模式选择
+        builder.setView(R.layout.smoke_info_dialog_layout);
+        builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                showSmokePlanDialog();
+            }
+        });
+        builder.create().show();
+        //初始化主页
+    }
+
+    /**
+     * 展示抽烟模式选择对话框
+     */
+    private void showSmokePlanDialog() {
+        AlertDialog.Builder builder1 = new AlertDialog.Builder(MainActivity.this);
+        builder1.setView(R.layout.smoke_plan_dialog_layout);
+        builder1.show();
     }
 
     @Override

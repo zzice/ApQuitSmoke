@@ -18,4 +18,8 @@ public interface Apis {
     //注册
     @POST("/api/v1/register")
     Observable<UserBean> signToRegister(@Query("userPhone") String userPhone, @Query("password") String password);
+
+    //登录
+    @POST("/api/v1/login")
+    Observable<UserBean> signToLogin(@Query("userPhone") String userPhone, @Query("password") String password);
 }

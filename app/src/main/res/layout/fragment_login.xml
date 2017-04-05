@@ -24,13 +24,12 @@
         <EditText
             android:id="@+id/login_phone_et"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_weight="1"
             android:background="@null"
             android:gravity="center"
             android:inputType="phone"
-            android:text="18661965238"
             android:textColor="@color/colorWhite"/>
     </LinearLayout>
 
@@ -58,13 +57,12 @@
         <EditText
             android:id="@+id/login_password_et"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_weight="1"
             android:background="@null"
             android:gravity="center"
             android:inputType="textPassword"
-            android:text="18661965238"
             android:textColor="@color/colorWhite"/>
     </LinearLayout>
 

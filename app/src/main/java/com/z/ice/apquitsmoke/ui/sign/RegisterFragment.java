@@ -15,6 +15,7 @@ import com.z.ice.apquitsmoke.bean.UserBean;
 import com.z.ice.apquitsmoke.di.presenter.RegisterPresenter;
 import com.z.ice.apquitsmoke.di.presenter.contract.RegisterContract;
 import com.z.ice.apquitsmoke.ui.main.MainActivity;
+import com.z.ice.zutilslib.util.SpUtils;
 import com.z.ice.zutilslib.util.TimerUtil;
 import com.z.ice.zutilslib.util.ToastUtil;
 
@@ -84,10 +85,13 @@ public class RegisterFragment extends BaseFragment<RegisterPresenter> implements
     }
 
     @Override
-    public void jumpToMain(UserBean userBean) {
+    public void jumpToMain(String token, UserBean userBean) {
+        //移除sp数据存储
+        SpUtils.clear(getActivity());
+        SpUtils.put(getActivity(), "token", token);
         Bundle bundle = new Bundle();
-        bundle.putSerializable("user",userBean);
-        openAndCloseActivity(MainActivity.class,bundle);
+        bundle.putSerializable("user", userBean);
+        openAndCloseActivity(MainActivity.class, bundle);
     }
 
     @Override
@@ -133,10 +137,6 @@ public class RegisterFragment extends BaseFragment<RegisterPresenter> implements
                 }
                 break;
         }
-    }
-
-    private String getEtTextString(EditText et) {
-        return et.getText().toString().trim();
     }
 
     /**

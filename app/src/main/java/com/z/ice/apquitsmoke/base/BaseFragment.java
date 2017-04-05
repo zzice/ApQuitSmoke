@@ -148,4 +148,11 @@ public abstract class BaseFragment<T extends BasePresenter> extends SupportFragm
     public boolean isEditTextValueEmpty(EditText et) {
         return TextUtils.isEmpty(et.getText().toString().trim());
     }
+
+    public String getEtTextString(EditText et) {
+        if (!isEditTextValueEmpty(et)) {
+            return et.getText().toString().trim();
+        } else
+            return "";
+    }
 }

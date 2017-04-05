@@ -9,11 +9,9 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 
 import com.z.ice.apquitsmoke.R;
+import com.z.ice.apquitsmoke.base.SimpleBaseFragment;
 
-import me.yokeyword.fragmentation.SupportFragment;
-
-public class SelectModeFragment extends SupportFragment {
-
+public class SelectModeFragment extends SimpleBaseFragment {
 
 
     public SelectModeFragment() {
@@ -25,16 +23,26 @@ public class SelectModeFragment extends SupportFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_select_mode, container, false);
-
         return view;
+    }
+
+    @Override
+    protected int getLayoutId() {
+        return R.layout.fragment_select_mode;
+    }
+
+    @Override
+    protected void initEventAndData() {
+
     }
 
     /**
      * 动态设置ListView的高度
+     *
      * @param listView
      */
     public static void setListViewHeightBasedOnChildren(ListView listView) {
-        if(listView == null) return;
+        if (listView == null) return;
 
         ListAdapter listAdapter = listView.getAdapter();
         if (listAdapter == null) {

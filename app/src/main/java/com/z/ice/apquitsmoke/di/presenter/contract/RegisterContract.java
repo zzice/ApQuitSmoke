@@ -15,7 +15,7 @@ public interface RegisterContract {
 
     interface View extends BaseView {
 
-        void jumpToMain(UserBean userBean);
+        void jumpToMain(String token, UserBean userBean);
 
         /**
          * 启动或关闭倒计时

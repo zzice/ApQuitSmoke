@@ -21,4 +21,8 @@ public class RetrofitHelper {
     public Observable<UserBean> fetchUserInfo(String phoneNum, String password) {
         return mApis.signToRegister(phoneNum, password);
     }
+
+    public Observable<UserBean> fetchUserLoginInfo(String phoneNum, String password) {
+        return mApis.signToLogin(phoneNum, password);
+    }
 }

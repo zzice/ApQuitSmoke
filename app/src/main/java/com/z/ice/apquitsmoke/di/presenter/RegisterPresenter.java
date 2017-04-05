@@ -80,13 +80,16 @@ public class RegisterPresenter extends RxPresenter<RegisterContract.View> implem
                 }
             }
         };
-        SMSSDK.registerEventHandler(eventHandler); //注册短信回调
+        //注册短信回调
+        SMSSDK.registerEventHandler(eventHandler);
+        //获取短信
         SMSSDK.getVerificationCode("+86", phoneNumber);
     }
 
     @Override
     public void verifyPhoneCode(String phoneNumber, String code) {
         mView.isShowLoadingView(true);
+        //验证短信验证码
         SMSSDK.submitVerificationCode("+86", phoneNumber, code);
     }
 
@@ -102,7 +105,9 @@ public class RegisterPresenter extends RxPresenter<RegisterContract.View> implem
                         if (userBean.isSuccess()) {
                             Logger.d("token:" + userBean.getToken());
                             mView.showShortMessage("注册成功");
-                            mView.jumpToMain(userBean);
+                            mView.jumpToMain(userBean.getToken(),userBean);
+                        }else {
+                            mView.showError(userBean.getError());
                         }
                     }
                 }, new Action1<Throwable>() {
@@ -114,6 +119,7 @@ public class RegisterPresenter extends RxPresenter<RegisterContract.View> implem
                 });
         addSubscrebe(subscription);
         mView.isShowLoadingView(false);
+        SMSSDK.unregisterAllEventHandler();
     }
 
 
