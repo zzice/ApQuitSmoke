@@ -12,31 +12,44 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <RadioButton
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginTop="20dp"
             android:layout_weight="1"
-            android:button="@null"
-            android:background="@color/colorPrimary"
-            android:padding="10dp"
-            android:text="戒烟模式\n\n  吸烟者的平均寿命比不吸烟者短，例如25岁的人一天吸烟40支，他的寿命比同龄不吸烟者要短8.3年"
-            android:textColor="@color/colorWhite"
-            android:textSize="18sp"/>
+            android:background="@color/colorPrimary">
 
-        <RadioButton
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?android:attr/selectableItemBackground"
+                android:button="@null"
+                android:padding="10dp"
+                android:text="戒烟模式\n\n  吸烟者的平均寿命比不吸烟者短，例如25岁的人一天吸烟40支，他的寿命比同龄不吸烟者要短8.3年"
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginBottom="20dp"
             android:layout_marginTop="20dp"
             android:layout_weight="1"
-            android:button="@null"
-            android:background="@color/colorPrimary"
-            android:padding="10dp"
-            android:text="戒烟模式\n\n　戒烟5-10年后，其肺癌死亡率比不吸烟者略为高一点，戒烟10-15后，得肺癌的机会便可降低到与不吸烟一样"
-            android:textColor="@color/colorWhite"
-            android:textSize="18sp"/>
+            android:background="@color/colorPrimary">
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?android:attr/selectableItemBackground"
+                android:button="@null"
+                android:padding="10dp"
+                android:text="戒烟模式\n\n　戒烟5-10年后，其肺癌死亡率比不吸烟者略为高一点，戒烟10-15后，得肺癌的机会便可降低到与不吸烟一样"
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"/>
+        </RelativeLayout>
     </RadioGroup>
+
     <!--    <Button
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -147,4 +160,5 @@
                     android:textColor="@color/colorWhite"/>
             </RelativeLayout>
         </android.support.v7.widget.CardView>-->
+
 </LinearLayout>

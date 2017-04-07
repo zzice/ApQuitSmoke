@@ -29,8 +29,8 @@ public class MainActivity extends BaseActivity<LaunchPresenter> implements Launc
     DrawerLayout mDrawerLayout;
 
     ActionBarDrawerToggle mDrawerToggle;
-//    @BindView(R.id.fl_main_content)
-//    FrameLayout mFlMainContent;
+//  @BindView(R.id.fl_main_content)
+//  FrameLayout mFlMainContent;
 
 
     @Override
@@ -54,8 +54,8 @@ public class MainActivity extends BaseActivity<LaunchPresenter> implements Launc
         mDrawerLayout.addDrawerListener(mDrawerToggle);
         mDrawerNv.getChildAt(0).setVerticalScrollBarEnabled(false);
         mDrawerNv.getHeaderView(0).setBackgroundResource(Constants.headerImgs[new Random().nextInt(Constants.headerImgs.length)]);
-        SelectModeFragment selectModeFragment = new SelectModeFragment();
-        loadRootFragment(R.id.fl_main_content, selectModeFragment);
+//        SelectModeFragment selectModeFragment = new SelectModeFragment();
+//        loadRootFragment(R.id.fl_main_content, selectModeFragment);
         //判断是否初次进入应用
         //dialog问卷调查 烟龄 每日抽烟数量 价格 模式选择
         //tips 烟龄 每日抽烟数量 价格

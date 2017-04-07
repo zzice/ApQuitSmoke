@@ -18,6 +18,7 @@ import com.z.ice.zutilslib.util.ToastUtil;
 
 import butterknife.BindView;
 import butterknife.OnClick;
+import butterknife.OnLongClick;
 
 /**
  * desc: 登录Fragment
@@ -54,6 +55,17 @@ public class LoginFragment extends BaseFragment<LoginPresenter> implements Login
             mLoginPhoneEt.setText((String) SpUtils.get(getActivity(), "phone", ""));
             mLoginPasswordEt.setText((String) SpUtils.get(getActivity(), "password", ""));
         }
+
+    }
+
+    /**
+     * 免登陆进入主页
+     */
+    @OnLongClick(R.id.sign_login_btn)
+    public boolean debugLogin() {
+        ToastUtil.showShortToast(getActivity(),"免登陆进入主页");
+        openAndCloseActivity(MainActivity.class);
+        return true;
     }
 
     @Override
