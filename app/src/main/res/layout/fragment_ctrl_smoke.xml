@@ -4,7 +4,7 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:orientation="vertical"
-              tools:context="com.z.ice.apquitsmoke.ui.main.SelectModeFragment">
+              tools:context="com.z.ice.apquitsmoke.ui.main.CtrlSmokeFragment">
 
     <RelativeLayout
         android:layout_width="match_parent"

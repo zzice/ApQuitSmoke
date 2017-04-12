@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:title="分享应用"
+        app:showAsAction="never"/>
+    <item
+        android:title="反馈建议"
+        app:showAsAction="never"/>
+    <item
+        android:title="版本介绍"
+        app:showAsAction="never"/>
+    <item
+        android:title="@string/drawer_item_about"
+        app:showAsAction="never"/>
+
+</menu>

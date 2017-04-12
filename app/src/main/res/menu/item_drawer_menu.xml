@@ -4,10 +4,10 @@
         <menu>
             <item
                 android:icon="@mipmap/ic_launcher"
-                android:title="@string/drawer_item_settings"/>
+                android:title="我的等级"/>
             <item
                 android:icon="@mipmap/ic_launcher"
-                android:title="@string/drawer_item_about"/>
+                android:title="经验路径"/>
             <item
                 android:icon="@mipmap/ic_launcher"
                 android:title="@string/drawer_item_settings"/>

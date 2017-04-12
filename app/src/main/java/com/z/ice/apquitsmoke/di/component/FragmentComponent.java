@@ -4,7 +4,6 @@ import android.app.Activity;
 
 import com.z.ice.apquitsmoke.di.module.FragmentModule;
 import com.z.ice.apquitsmoke.di.scope.FragmentScope;
-import com.z.ice.apquitsmoke.ui.main.SelectModeFragment;
 import com.z.ice.apquitsmoke.ui.sign.LoginFragment;
 import com.z.ice.apquitsmoke.ui.sign.RegisterFragment;
 
@@ -25,8 +24,6 @@ public interface FragmentComponent {
     void inject(LoginFragment loginFragment);
 
     void inject(RegisterFragment registerFragment);
-
-    void inject(SelectModeFragment selectModeFragment);
 
 //    void inject(ThemeFragment themeFragment);
 //

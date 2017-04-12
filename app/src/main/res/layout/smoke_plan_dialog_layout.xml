@@ -7,158 +7,46 @@
               android:orientation="vertical"
               android:padding="10dp">
 
-    <RadioGroup
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginTop="20dp"
-            android:layout_weight="1"
-            android:background="@color/colorPrimary">
-
-            <RadioButton
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="?android:attr/selectableItemBackground"
-                android:button="@null"
-                android:padding="10dp"
-                android:text="戒烟模式\n\n  吸烟者的平均寿命比不吸烟者短，例如25岁的人一天吸烟40支，他的寿命比同龄不吸烟者要短8.3年"
-                android:textColor="@color/colorWhite"
-                android:textSize="18sp"/>
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginBottom="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_weight="1"
-            android:background="@color/colorPrimary">
-
-            <RadioButton
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="?android:attr/selectableItemBackground"
-                android:button="@null"
-                android:padding="10dp"
-                android:text="戒烟模式\n\n　戒烟5-10年后，其肺癌死亡率比不吸烟者略为高一点，戒烟10-15后，得肺癌的机会便可降低到与不吸烟一样"
-                android:textColor="@color/colorWhite"
-                android:textSize="18sp"/>
-        </RelativeLayout>
-    </RadioGroup>
-
-    <!--    <Button
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:background="@color/colorPrimary"
-            android:text="控烟模式"
-            android:textColor="@color/colorWhite"
-            android:textSize="20sp"
-            />
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1"
+        android:background="@color/colorPrimary">
 
         <Button
+            android:id="@+id/d_ctrl_btn"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:layout_marginTop="10dp"
-            android:background="@color/colorPrimary"
-            android:text="戒烟模式"
-            android:textColor="@color/colorWhite"
-            android:textSize="20sp"
-            />-->
-
-    <!--    <android.support.v7.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="left|center_vertical"
+            android:padding="10dp"
             android:clickable="true"
-            app:cardCornerRadius="5dp"
-            app:cardElevation="8dp"
-            >
+            android:text="控烟模式\n\n  吸烟者的平均寿命比不吸烟者短，例如25岁的人一天吸烟40支，他的寿命比同龄不吸烟者要短8.3年"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp"/>
+    </RelativeLayout>
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/colorPrimary"
-                android:gravity="center"
-                android:paddingLeft="16sp"
-                android:paddingRight="16sp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1"
+        android:background="@color/colorPrimary">
 
-                <TextView
-                    android:id="@+id/mode1_name_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="控烟模式"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="24sp"/>
-
-                <TextView
-                    android:id="@+id/mode1_detail_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/mode1_name_tv"
-                    android:layout_marginTop="16dp"
-                    android:text="xxxxxxxx\nxxxxxxxxxxxxxxxxxxxx\nxxxxxxxxxxxxxxxxxxxx"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="14sp"/>
-
-                <TextView
-                    android:id="@+id/mode1_detail1_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/mode1_detail_tv"
-                    android:layout_marginBottom="16sp"
-                    android:layout_marginTop="16dp"
-                    android:text="xxxxxxxx\nxxxxxxxxxxxxxxxxxxxx\nxxxxxxxxxxxxxxxxxxxx\nxxxxxxxxxxxxxxxxxxxx"
-                    android:textColor="@color/colorWhite"/>
-
-            </RelativeLayout>
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
+        <Button
+            android:id="@+id/d_quit_btn"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginTop="20dp"
-            android:layout_weight="1"
-            app:cardCornerRadius="5dp"
-            app:cardElevation="8dp"
-            >
+            android:layout_height="match_parent"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="left|center_vertical"
+            android:padding="10dp"
+            android:clickable="true"
+            android:text="戒烟模式\n\n　戒烟5-10年后，其肺癌死亡率比不吸烟者略为高一点，戒烟10-15后，得肺癌的机会便可降低到与不吸烟一样"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp"/>
+    </RelativeLayout>
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/colorPrimary"
-                android:gravity="center">
-
-                <TextView
-                    android:id="@+id/mode2_name_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="戒烟模式"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="16sp"/>
-
-                <TextView
-                    android:id="@+id/mode2_detail_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/mode2_name_tv"
-                    android:text="xxxxxxxx\nxxxxxxxxxxxxxxxxxxxx\nxxxxxxxxxxxxxxxxxxxx"
-                    android:textColor="@color/colorWhite"/>
-
-                <TextView
-                    android:id="@+id/mode2_detail1_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/mode2_detail_tv"
-                    android:text="xxxxxxxx\nxxxxxxxxxxxxxxxxxxxx\nxxxxxxxxxxxxxxxxxxxx\nxxxxxxxxxxxxxxxxxxxx"
-                    android:textColor="@color/colorWhite"/>
-            </RelativeLayout>
-        </android.support.v7.widget.CardView>-->
 
 </LinearLayout>

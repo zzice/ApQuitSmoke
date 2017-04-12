@@ -4,7 +4,7 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:orientation="vertical"
-              tools:context="com.z.ice.apquitsmoke.ui.main.SelectModeFragment">
+              tools:context="com.z.ice.apquitsmoke.ui.main.QuitSmokeFragment">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -25,7 +25,7 @@
             android:layout_below="@+id/_iv"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
-            android:text="控烟模式"
+            android:text="戒烟模式"
             android:textColor="@color/colorWhite"
             android:textSize="18sp"/>
     </RelativeLayout>
@@ -43,7 +43,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:padding="10dp"
-        android:text="10支内"
+        android:text="一支都不能抽"
         android:textColor="@color/colorPrimary"
         android:textSize="18sp"/>
 
@@ -66,12 +66,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="今日压制"
-                android:textSize="16sp"/>
+                android:textSize="18sp"
+                android:textStyle="bold"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0"
+                android:text="6"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="20sp"
                 android:textStyle="bold"/>
@@ -100,27 +101,6 @@
                 android:textStyle="bold"/>
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="今日抽烟"
-                android:textSize="16sp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0"
-                android:textColor="@color/colorPrimaryDark"
-                android:textSize="20sp"
-                android:textStyle="bold"/>
-        </LinearLayout>
 
     </LinearLayout>
 
@@ -138,7 +118,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@color/colorPrimary"
+            android:background="@drawable/btn_sl"
             android:text="压制烟瘾"
             android:textColor="@color/colorWhite"/>
 

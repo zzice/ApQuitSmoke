@@ -5,6 +5,7 @@ import android.app.Activity;
 import com.z.ice.apquitsmoke.di.module.ActivityModule;
 import com.z.ice.apquitsmoke.di.scope.ActivityScope;
 import com.z.ice.apquitsmoke.ui.launch.LaunchActivity;
+import com.z.ice.apquitsmoke.ui.main.MainActivity;
 
 import dagger.Component;
 
@@ -22,7 +23,7 @@ public interface ActivityComponent {
 
     void inject(LaunchActivity launchActivity);
 
-    //void inject(MainActivity mainActivity);
+    void inject(MainActivity mainActivity);
 
    /* void inject(ZhihuDetailActivity zhihuDetailActivity);
 

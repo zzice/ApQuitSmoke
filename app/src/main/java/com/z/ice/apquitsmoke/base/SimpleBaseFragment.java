@@ -3,7 +3,6 @@ package com.z.ice.apquitsmoke.base;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
-import android.support.annotation.IdRes;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -33,10 +32,6 @@ public abstract class SimpleBaseFragment extends SupportFragment {
         super.onAttach(context);
     }
 
-    public View find(View view, @IdRes int res) {
-        return view.findViewById(res);
-    }
-
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -44,7 +39,6 @@ public abstract class SimpleBaseFragment extends SupportFragment {
         return mView;
     }
 
-    /****************/
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);

@@ -9,6 +9,7 @@
     <color name="colorBackground">#efecec</color>
     <color name="colorWhite">#ffffff</color>
     <color name="colorTranslucent">#6f000000</color>
+    <color name="colorfTranslucent">#5c000000</color>
 
 
     <color name="colorGuidePage">#69AC5D</color>

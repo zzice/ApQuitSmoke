@@ -36,9 +36,7 @@ dependencies {
     compile "com.android.support:recyclerview-v7:$rootProject.ext.recycleViewVersion"
     compile "com.android.support:support-v4:$rootProject.ext.supportV4Version"
     compile "com.android.support:cardview-v7:$rootProject.ext.recycleViewVersion"
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile "junit:junit:$rootProject.ext.junitVersion"
-
     //通用库-自用
     compile project(':zutilslib')
 
@@ -47,39 +45,32 @@ dependencies {
     annotationProcessor "com.google.dagger:dagger-compiler:$rootProject.ext.daggerVersion"
 
     //Butterknife
-    compile 'com.jakewharton:butterknife:8.5.1'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
-
     //Glide
-    compile 'com.github.bumptech.glide:glide:3.7.0'
-
     //UI
-    compile 'de.hdodenhof:circleimageview:2.1.0'
-    compile 'cn.bingoogolapple:bga-banner:2.1.7@aar'
-
     //log
-    compile 'com.orhanobut:logger:1.15'
-
     //Fragment
-    compile 'me.yokeyword:fragmentation:0.10.1'
-
     //Rx
     //compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
     //compile 'io.reactivex.rxjava2:rxjava:2.0.1'
-    compile 'io.reactivex:rxjava:1.1.8'
-    compile 'io.reactivex:rxandroid:1.2.1'
-
     //Mob 短信
     compile name: 'SMSSDK-2.1.4', ext: 'aar'
-
     //rx permission权限
-    compile 'com.tbruyelle.rxpermissions:rxpermissions:0.9.3@aar'
-
     //工具类
-    compile 'com.blankj:utilcode:1.3.7'
-
     //Retrofit
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:support-v4:25.3.1'
+    compile 'com.jakewharton:butterknife:8.5.1'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'cn.bingoogolapple:bga-banner:2.1.7@aar'
+    compile 'com.orhanobut:logger:1.15'
+    compile 'me.yokeyword:fragmentation:0.10.1'
+    compile 'io.reactivex:rxjava:1.1.8'
+    compile 'io.reactivex:rxandroid:1.2.1'
+    compile 'com.tbruyelle.rxpermissions:rxpermissions:0.9.3@aar'
+    compile 'com.blankj:utilcode:1.3.7'
     compile 'com.squareup.retrofit2:retrofit:2.2.0'
     compile 'com.squareup.retrofit2:converter-gson:2.2.0'
     compile 'com.squareup.retrofit2:adapter-rxjava:2.2.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
 }
