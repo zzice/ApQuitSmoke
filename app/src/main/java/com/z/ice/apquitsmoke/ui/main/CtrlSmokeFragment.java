@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.github.florent37.viewanimator.ViewAnimator;
 import com.z.ice.apquitsmoke.R;
 
 /**
@@ -20,9 +19,8 @@ public class CtrlSmokeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        ViewAnimator viewAnimator = new ViewAnimator();
-        return inflater.inflate(R.layout.fragment_ctrl_smoke, container, false);
+        View view = inflater.inflate(R.layout.fragment_ctrl_smoke, container, false);
+        return view;
     }
 
 }

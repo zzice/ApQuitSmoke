@@ -5,13 +5,6 @@
         android:title="分享应用"
         app:showAsAction="never"/>
     <item
-        android:title="反馈建议"
+        android:title="更改计划"
         app:showAsAction="never"/>
-    <item
-        android:title="版本介绍"
-        app:showAsAction="never"/>
-    <item
-        android:title="@string/drawer_item_about"
-        app:showAsAction="never"/>
-
 </menu>
